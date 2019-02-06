@@ -110,7 +110,7 @@ func Destination(opts *config.KanikoOptions, cacheKey string) (string, error) {
 		}
 		return fmt.Sprintf("%s/cache:%s", destRef.Context(), cacheKey), nil
 	}
-	return fmt.Sprintf("%s:%s", cache, cacheKey), nil
+	return fmt.Sprintf("%s%s", cache, cacheKey), nil
 }
 
 // LocalSource retieves a source image from a local cache given cacheKey
